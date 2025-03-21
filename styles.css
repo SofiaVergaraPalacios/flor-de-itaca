@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: linear-gradient(to top, #6a0dad, #000); 
+    --text-color: #ffdd57;
+    --heart-color: yellow;
+    --btn-bg: #ffdd57;
+    --btn-text: #6a0dad;
+}
+
+body {
+    background-image: var(--color-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color);
+    font-family: 'Pacifico', cursive;
+}
+
+/* Ocultar o reducir el tamaño del corazón */
+.heart {
+    display: none; /* Ocultar */
+    /* Si prefieres que sea más pequeño en lugar de ocultarlo, puedes usar: */
+    /* width: 50px; height: 50px; */
+}
+
+/* Fondo de la flor */
+.sunflower {
+    position: relative;
+    margin-top: 50px;
+}
+
+/* Estilo para las imágenes */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floresmoradas {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+}
+
+.odiypenelope {
+    position: absolute;
+    z-index: 2;
+    width: 60%;
+    top: 20%;
+}
+
+.penelope {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    font-size: 3em;
+    top: 60%;
+    font-weight: bold;
+}
+
+/* Sección para escribir */
+.text-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text-section textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+/* Luces */
+.light {
+    /* Mantén tus estilos actuales para las luces aquí */
+}
+
+.message-container {
+    position: fixed;  /* Lo hace visible sin necesidad de hacer scroll */
+    top: 50%;  /* Lo posiciona en el centro vertical */
+    left: 50%;  /* Lo posiciona en el centro horizontal */
+    transform: translate(-50%, -50%);  /* Ajusta la posición para que esté exactamente centrado */
+    text-align: center;  /* Centra el texto dentro del contenedor */
+    background-color: rgba(0, 0, 0, 0.5);  /* Fondo semi-transparente para el texto */
+    color: white;  /* Color del texto */
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;  /* Puedes ajustar la fuente si lo prefieres */
+    font-size: 1.2em;
+}
+
+/* Sección de la flor morada y los corazones decorativos */
+.flower-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.flower-img {
+    width: 300px;  /* Ajusta el tamaño según lo desees */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hearts {
+    position: absolute;
+    top: -50px;  /* Ajusta la posición según desees */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+    background-color: var(--heart-color);
+    position: relative;
+    border-radius: 50%;
+    animation: beat 1.5s infinite;
+}
+
+.heart:before, .heart:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--heart-color);
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -15px;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    left: 15px;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.2) rotate(-45deg); }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Flor de Itaca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="PlayAudio()">
+    <audio id="musica1" autoplay>
+        <source src="EPIC.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Sección del fondo y la flor -->
+    <div class="sunflower">
+        <div class="flower_wrapper">
+            <div class="flower_stem"></div>
+            <div class="flower_center"></div>
+            <div class="flower_petal flower_petal-1"></div>
+            <!-- ... (tus otras flores) ... -->
+        </div>
+        
+        <!-- Imágenes centradas -->
+        <div class="image-wrapper">
+            <img src="floresmoradas.jpg" alt="Flores Moradas" class="floresmoradas"> <div class="message-container">
+                <p>Brillas como estrella en la inmensidad, tu luz irradia fuerza, pura claridad.</p>
+            </div>
+            <img src="odiypenelo.jpg" alt="Odiypenelope" class="odiypenelope">
+            <div class="message-container">
+                <p>Tu belleza no solo se ve, se siente en el aire, y tu valentía vive en cada gesto, en cada paso que das.</p>
+            </div>
+            <img src="penelope.jpg" alt="Penélope" class="penelope">
+            <p>"Eres mi Penélope, y yo tu Odiseo, mi hogar no está en ninguna parte más que a tu lado, porque contigo, Ítaca es donde siempre quiero llegar."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección para escribir algo lindo -->
+    <div class="text-section">
+        <p>"En el vasto mar de la historia, te encontré,
+        como un canto en la noche que no deja de arder.
+        Tu mirada es la fuerza, el sol que me guía,
+        como una melodía eterna, como la misma vida.
+        
+        Fuiste mi heroína, mi fuerza y mi paz,
+        en cada acorde de esta vida, tú eras mi compás.
+        Epic fue el viaje, pero tú, mi destino,
+        tejiendo sueños y colores en cada camino.
+        
+        Como un faro en la tormenta, tus ojos brillan,
+        mientras el viento susurra lo que el alma ansía.
+        La flor que florece en el jardín de mis días,
+        tu nombre, Penélope, es mi eterna melodía."</p>
+<p>Te amo amor</p>
+    </div>
+
+    <div class="light light-1"></div>
+    <div class="light light-2"></div>
+    <!-- Más luces -->
+</body>
+<script>
+    function PlayAudio(){
+        document.getElementById("musica1").play(); 
+    }
+</script>
+</html>
